@@ -168,12 +168,32 @@ input:disabled{
     background-color: whitesmoke;
 }
 
+#NT_Bk{
+    width: 8ex;
+    height: 10ex;
+}
+
 #Next{
     font-size: 30px;
     text-align: center;
-    border: silver solid 1px;
+    border-radius: 7px;
+    border: slategray solid 1px;
     margin-left: 5ex;
-    width: 8ex;
-    height: 80px;
+    /* width: 8ex;
+    height: 80px; */
     color: black;
+    text-decoration: none;
+    background-color: cornsilk;
+}
+
+#Back{
+    font-size: 24px;
+    text-align: center;
+    margin-right: 30px;
+    /* width: 80px;
+    height: 100px; */
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+    border: slategray solid 1px;
 }
