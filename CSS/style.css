@@ -1,0 +1,179 @@
+/* *{
+     border: 1px solid black; 
+} */
+
+body{
+    margin: 0 0;
+    background-image: url(../img/Doc1-page0001.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.To_Right{
+    float: left;
+    display: flex;
+    align-content: center;
+}
+
+.To_Right > img{
+    margin: 20ex 27ex;
+}
+
+.To_left{
+    float: right;
+}
+
+.Game_Name{
+    display: flex;
+    align-content: center;
+    font-size: 7ex;
+}
+
+.Game_Name> h1{
+    display: flex;
+    justify-content: center;
+    width: 14ex;
+    margin-top: 3ex;
+    padding-right: 8ex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif
+}
+
+/* .start{
+    text-align: center;
+} */
+.Start_On{
+    border-radius: 7px;
+    font-size: 16px;
+    border: slategray solid 1px;
+    margin: 0 15px;
+}
+
+.Start_On:hover{
+    background-color: peru;
+    color: whitesmoke;
+    border: none;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+#instruc_game{
+    padding: 13px;
+    width:91ex;
+    font-size: 29px;
+}
+
+nav{
+    background-color: burlywood;
+    display: inline-block;
+    width: 100%;
+    height: 8ex;
+    margin-bottom: 5ex;
+    align-items: center;
+}
+
+
+div .diffic{
+    width: 30ex;
+    display: flex;
+    justify-content:space-between;
+    margin: 0;
+    transform: translate(150px, 2px);
+    font-size: 34px;
+}
+
+/* #pause{
+    background-image: url(../img/Pause_64px.png);
+    width: 8ex;
+    height: 8ex;
+    transform: translate(80ex, -40px);
+    border:0;
+}
+
+#play{
+    background-image: url(../img/Play_50px.png);
+    width: 8ex;
+    height: 8ex;
+    transform: translate(80ex, -40px);
+    border: 0;
+} */
+
+.box{
+    display: flex;
+    padding-bottom: 15px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+/* First Box */
+/*#col-00, #col-01, #col-02{border-top: solid 3px black;}
+#col-02, #col-12, #col-22{border-right: solid 3px black;}
+#col-00, #col-10, #col-20{border-left: solid 3px black;}
+#col-20, #col-21, #col-22{border-bottom: solid 3px black;}*/
+
+/* Second Box */
+/*#col-03, #col-04, #col-05{border-top: solid 3px black;}
+#col-05, #col-15, #col-25{border-right: solid 3px black;}
+#col-03, #col-13, #col-23{border-left: solid 3px black;}
+#col-23, #col-24, #col-25{border-bottom: solid 3px black;}*/
+
+.call_num
+{
+    font-size: 30px;
+    text-align: center;
+    border: silver solid 1px;
+    width: 2ex;
+    height: 80px;
+    color: black;
+}
+
+.Val_Num{
+    width: 5ex;
+    height: 80px;
+    border: none;
+    text-align: center;
+    font-size: 40px
+}
+
+input:disabled{
+    background-color: rgb(233, 233, 233);
+}
+
+
+.TakNum{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    border: solid 1px grey;
+    float: left;
+    margin-bottom: 11ex;
+    margin-left: 40px;
+}
+
+.TakNum > button{
+    border: solid 1px grey;
+    font-size: 9ex;
+    width: 60px;
+    background-color: white;
+}
+
+.TakNum > button:hover{
+    border: rgb(0, 128, 128) 3px solid;
+}
+
+#Check{
+    display: flex;
+    align-items: flex-end;
+    background-color: whitesmoke;
+}
+
+#Next{
+    font-size: 30px;
+    text-align: center;
+    border: silver solid 1px;
+    margin-left: 5ex;
+    width: 8ex;
+    height: 80px;
+    color: black;
+}
