@@ -1,5 +1,4 @@
 # Sudoku---Ola
-# Sudoku---Ola
 ## About Game
 Sudoku is a game based on numbers where the player must put the correct number inside the empty square, Be sure that the number chosen is not inconsistent with the numbers in the columns or rows
 
