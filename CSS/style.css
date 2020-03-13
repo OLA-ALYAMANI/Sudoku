@@ -4,9 +4,13 @@
 
 body{
     margin: 0 0;
+}
+
+.Front_Pag{
     background-image: url(../img/Doc1-page0001.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 90% 100%;
 }
 
 .To_Right{
@@ -64,38 +68,49 @@ body{
 
 nav{
     background-color: burlywood;
-    display: inline-block;
     width: 100%;
     height: 8ex;
     margin-bottom: 5ex;
-    align-items: center;
+    
 }
 
 
-div .diffic{
+/* div .diffic{
     width: 30ex;
     display: flex;
     justify-content:space-between;
     margin: 0;
     transform: translate(150px, 2px);
     font-size: 34px;
+} */
+
+.continer{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-evenly;
 }
 
-/* #pause{
-    background-image: url(../img/Pause_64px.png);
-    width: 8ex;
-    height: 8ex;
-    transform: translate(80ex, -40px);
+#pause, #play{
     border:0;
+    background-position: center;
+    width: 8ex;
+    height: 7ex;
 }
 
 #play{
     background-image: url(../img/Play_50px.png);
-    width: 8ex;
-    height: 8ex;
-    transform: translate(80ex, -40px);
-    border: 0;
-} */
+}
+
+#pause{
+    background-image: url(../img/Pause_64px.png);
+}
+
+.Timer{
+    font-size: 6ex;
+    display: flex;
+    justify-content: right;
+}
 
 .box{
     display: flex;
@@ -168,12 +183,32 @@ input:disabled{
     background-color: whitesmoke;
 }
 
+#NT_Bk{
+    width: 50%;
+    height: 10ex;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
 #Next{
-    font-size: 30px;
-    text-align: center;
-    border: silver solid 1px;
-    margin-left: 5ex;
-    width: 8ex;
-    height: 80px;
+    font-size: 40px;
+    text-align: center; 
     color: black;
+    text-decoration: none;
+}
+
+#Back{
+    font-size: 40px;
+    text-align: center;   
+    color: black;
+    text-decoration: none;
+}
+
+.select:hover{
+    background-color:gold;
+    text-decoration: none;
+}
+.call_val{
+    background-color: lightsalmon;
 }

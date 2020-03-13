@@ -33,9 +33,12 @@
     <!-- Second Pag it for game -->
     <div class="game_Pag">
         <nav>
-            <div id="difficulty_text" class="diffic">Difficulty: Esay</div>
-            <!-- <button id="pause"></button>
-            <button id="play"></button> -->
+            <!-- <div id="difficulty_text" class="diffic">Difficulty: Esay</div> -->
+            <div class = "continer">
+            <button id="pause"></button>
+            <button id="play"></button>
+            <span class="Timer">00:00:00</span>
+        </div>
         </nav>
     
         
@@ -64,21 +67,21 @@
                         <input id="11" class="Val_Num" type="text" maxlength="1">
                     </td>
                     <td class="call_num">
-                        <input id="12" class="Val_Num" type="text" maxlength="1">
+                        <input id="12" class="Val_Num" type="text" maxlength="1" value="2" disabled>
                     </td>
                     <td class="call_num">
-                        <input id="13" class="Val_Num" type="text" maxlength="1" value="2" disabled>
+                        <input id="13" class="Val_Num" type="text" maxlength="1">
                     </td>
                 </tr>
                 <tr class="colm">
                     <td class="call_num">
-                        <input id="20" class="Val_Num" type="text" maxlength="1" value="2" disabled>
+                        <input id="20" class="Val_Num" type="text" maxlength="1">
                     </td>
                     <td class="call_num">
                         <input id="21" class="Val_Num" type="text" maxlength="1">
                     </td>
                     <td class="call_num">
-                        <input id="22" class="Val_Num" type="text" maxlength="1" value="4" disabled>
+                        <input id="22" class="Val_Num" type="text" maxlength="1" value="1" disabled>
                     </td>
                     <td class="call_num">
                         <input id="23" class="Val_Num" type="text" maxlength="1">
@@ -101,16 +104,17 @@
         </tbody>
         </table>
         <div id="numbers" class="TakNum">
-            <button id="But_item-1">1</button>
-            <button id="But_item-2">2</button>
-            <button id="But_item-3">3</button>
-            <button id="But_item-4">4</button>
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+            <button id="4">4</button>
         </div>
     </div>
-    
-    <button id="Next">Next Level
-        <a href="Next_Level.html">
-    </a></button>
+    <br>
+    <div id="NT_Bk">
+        <a id="Back" href="index.html">Back</a>
+        <a id="Next" href="Next_Level.html">Next Level</a>
+    </div>
 </div>
     <script src="./JS/jQuery.js"></script>
     <script src="./JS/main.js"></script>
