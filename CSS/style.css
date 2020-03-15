@@ -6,15 +6,25 @@
 
 body{
     margin: 0 0;
+<<<<<<< HEAD
     background-color: #bec2cb;
 }
 
 /* .Front_Pag{
+=======
+}
+
+.Front_Pag{
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
     background-image: url(../img/Doc1-page0001.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90% 100%;
+<<<<<<< HEAD
 } */
+=======
+}
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
 
 .To_Right{
     float: left;
@@ -77,6 +87,7 @@ header{
 }
 
 nav{
+<<<<<<< HEAD
     width: 100%;
     height: 8ex;
     display: flex;
@@ -85,6 +96,16 @@ nav{
     font-family: Lobster;
 }
 
+=======
+    background-color: burlywood;
+    width: 100%;
+    height: 8ex;
+    margin-bottom: 5ex;
+    
+}
+
+
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
 /* div .diffic{
     width: 30ex;
     display: flex;
@@ -95,6 +116,7 @@ nav{
 } */
 
 .continer{
+<<<<<<< HEAD
     display: flex;
     flex-direction: row;
 }
@@ -115,11 +137,23 @@ nav{
 }
 
 #pause, #play, #checks{
+=======
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-evenly;
+}
+
+#pause, #play{
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
     border:0;
     background-position: center;
     width: 8ex;
     height: 7ex;
+<<<<<<< HEAD
     margin-right: 5ex;
+=======
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
 }
 
 #play{
@@ -130,6 +164,7 @@ nav{
     background-image: url(../img/Pause_64px.png);
 }
 
+<<<<<<< HEAD
 #checks{
     background-image: url(../img/Checked_48px.png);
 }
@@ -143,6 +178,10 @@ nav{
     background-image: url(../img/Checked_48px);
     width: 8ex;
     height: 7ex;
+=======
+.Timer{
+    font-size: 6ex;
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
     display: flex;
     justify-content: right;
 }
@@ -218,6 +257,7 @@ input:disabled{
     background-color: whitesmoke;
 }
 
+<<<<<<< HEAD
 .FinshButt{
     left: 60ex;
 }
@@ -244,4 +284,34 @@ background-color:#c82f63;
 .call_val{
     background-color: #7a1b38;
     color: white;
+=======
+#NT_Bk{
+    width: 50%;
+    height: 10ex;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#Next{
+    font-size: 40px;
+    text-align: center; 
+    color: black;
+    text-decoration: none;
+}
+
+#Back{
+    font-size: 40px;
+    text-align: center;   
+    color: black;
+    text-decoration: none;
+}
+
+.select:hover{
+    background-color:gold;
+    text-decoration: none;
+}
+.call_val{
+    background-color: lightsalmon;
+>>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
 }

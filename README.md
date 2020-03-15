@@ -16,9 +16,9 @@ The game like several boxes, some of which are empty, the other is full and rand
     - jQuery
 ## wireframe
 
-![Front Page wireframe](../img/Front Pag.jpg)
+![Front Pag](https://media.git.generalassemb.ly/user/26796/files/d5803f00-658c-11ea-928f-8181955755ca)
 
-![Game Page wireframe](../img/Game Page.jpg)
+![Game Pag](https://media.git.generalassemb.ly/user/26796/files/1aa47100-658d-11ea-8ed0-6708d4b676d9)
 
 ## Difficult part on the project
 
