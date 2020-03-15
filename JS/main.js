@@ -1,11 +1,7 @@
-<<<<<<< HEAD
+
 var clock = $(".Timer")
 $("#Go").click(function(){
       if(clock === "0:0:0"){
-=======
-$("#Go").click(function(){
-      if($(".Time").html() == 00){
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
             start_time()
       }
 })
@@ -53,20 +49,12 @@ function start_time(){
 // fuction for change states - if click play or pause
       function changeState(){
             if(active == false){
-<<<<<<< HEAD
                   document.getElementsByID("#pause").innerHTML
-=======
-                  document.getElementsByID("#pause")
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
             }
             else{
                   active = true
                         start_time()
-<<<<<<< HEAD
                   document.getElementsByID("#play").innerHTML
-=======
-                  document.getElementsByID("#play")
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
             }
       }
 
@@ -93,22 +81,16 @@ $("#About_Game").on("click", function(){
 
 // var Sudoku_solve=[[1,2,3,4],[3,4,2,1],[2,1,4,3],[4,3,1,2]]
 
-<<<<<<< HEAD
+
 
 // Play the game
 
-      var Boxs
-      var row = $(".Val_Num")
-      var clou = $(".colm")
-      var numbutton = $(".TakNum").children()
-
-=======
 var Boxs
 var row = $(".Val_Num")
 var clou = $(".colm")
 var numbutton = $(".TakNum").children()
 
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
+
 // select the one of empty box
 row.click(function(e){
       if($(this).text()==""){
@@ -116,21 +98,13 @@ row.click(function(e){
             Boxs = $(this) 
       }
 })
-<<<<<<< HEAD
+
 
 // set the number to empty box
 numbutton.click(function(){
       if(Boxs){
             Boxs.val($(this).text())
       }
-      // for (var i=1; i<=4; i++){
-      //       for(var j=0; j<=4; j++){
-      //             // var check = Boxs[0]
-      //                   if($(this) == row[i] && $(this) == clou[j]){
-      //                         alert("noo")
-      //                   }
-      //             }
-      //       }
 })
 
 $("#checks").click(function(){
@@ -145,9 +119,9 @@ $("#checks").click(function(){
                         else{
                               alert("no")
                               break
-                        }
                   }
             }
+      }
 })
 
 $("#finsh").click(function(){
@@ -156,22 +130,5 @@ $("#finsh").click(function(){
       }
       else{
             alert("There empty box")
-=======
-
-// set the number to empty box
-numbutton.click(function(){
-      if(Boxs){
-            Boxs.val($(this).text())
-      }
-      for (var i = 1; i <= 4; i++)
-      var check = Boxs[0]
-      if(check == row[i] && check == clou[i]){
-            return false
-      }
-      else{
-            return true
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
       }
 })
-// Boxs.attr('id').match(/\d+$/)
-// console.log($(this).attr("id"))
