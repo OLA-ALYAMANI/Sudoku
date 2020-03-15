@@ -1,3 +1,9 @@
+var clock = $(".Timer")
+$("#Go").click(function(){
+      if(clock === "0:0:0"){
+            start_time()
+      }
+})
 // Track our timer
 var active = false
 // the main function
@@ -42,12 +48,12 @@ function start_time(){
 // fuction for change states - if click play or pause
       function changeState(){
             if(active == false){
-                  document.getElementsByID("#pause")
+                  document.getElementsByID("#pause").innerHTML
             }
             else{
                   active = true
                         start_time()
-                  document.getElementsByID("#play")
+                  document.getElementsByID("#play").innerHTML
             }
       }
 
@@ -74,10 +80,13 @@ $("#About_Game").on("click", function(){
 
 // var Sudoku_solve=[[1,2,3,4],[3,4,2,1],[2,1,4,3],[4,3,1,2]]
 
-var Boxs
-var row = $(".Val_Num")
-var clou = $(".colm")
-var numbutton = $(".TakNum").children()
+
+// Play the game
+
+      var Boxs
+      var row = $(".Val_Num")
+      var clou = $(".colm")
+      var numbutton = $(".TakNum").children()
 
 // select the one of empty box
 row.click(function(e){
@@ -92,10 +101,39 @@ numbutton.click(function(){
       if(Boxs){
             Boxs.val($(this).text())
       }
-      for (var i = 1; i <= 4; i++)
-      var check = Boxs[0]
-      if(check == row[i] && check == clou[i]){
-            return false
+      // for (var i=1; i<=4; i++){
+      //       for(var j=0; j<=4; j++){
+      //             // var check = Boxs[0]
+      //                   if($(this) == row[i] && $(this) == clou[j]){
+      //                         alert("noo")
+      //                   }
+      //             }
+      //       }
+})
+
+$("#checks").click(function(){
+      for (var i=0; i<4; i++){
+            for(var j=0; j<4; j++){
+                  var check = numbutton[i]
+                  if(check[i] !== row[i] && check[i] !== clou[j]){
+                        $(this).addClass(".call_val")
+                        alert("complet")
+                        break
+                        }
+                        else{
+                              alert("no")
+                              break
+                        }
+                  }
+            }
+})
+
+$("#finsh").click(function(){
+      if(row[i] != " " && clou[j] != " "){
+            alert("You complet the game")
+      }
+      else{
+            alert("There empty box")
       }
 })
 // Boxs.attr('id').match(/\d+$/)

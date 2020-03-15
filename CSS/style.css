@@ -1,17 +1,20 @@
-/* *{
-     border: 1px solid black; 
-} */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+
+*{
+    box-sizing: border-box;
+}
 
 body{
     margin: 0 0;
+    background-color: #bec2cb;
 }
 
-.Front_Pag{
+/* .Front_Pag{
     background-image: url(../img/Doc1-page0001.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 90% 100%;
-}
+} */
 
 .To_Right{
     float: left;
@@ -39,7 +42,7 @@ body{
     width: 14ex;
     margin-top: 3ex;
     padding-right: 8ex;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif
+    font-family: Lobster
 }
 
 /* .start{
@@ -53,7 +56,7 @@ body{
 }
 
 .Start_On:hover{
-    background-color: peru;
+    background-color:#c82f63;
     color: whitesmoke;
     border: none;
     border-radius: 7px;
@@ -66,14 +69,21 @@ body{
     font-size: 29px;
 }
 
-nav{
-    background-color: burlywood;
-    width: 100%;
-    height: 8ex;
-    margin-bottom: 5ex;
-    
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
 }
 
+nav{
+    width: 100%;
+    height: 8ex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Lobster;
+}
 
 /* div .diffic{
     width: 30ex;
@@ -85,17 +95,31 @@ nav{
 } */
 
 .continer{
-    width: 30%;
     display: flex;
-    justify-content: flex-end;
-    justify-content: space-evenly;
+    flex-direction: row;
 }
 
-#pause, #play{
+#Next{
+    font-size: 30px;
+    text-align: center; 
+    color: black;
+    text-decoration: none;
+    width: 14ex;
+}
+
+#Back{
+    font-size: 30px;
+    text-align: center;   
+    color: black;
+    text-decoration: none;
+}
+
+#pause, #play, #checks{
     border:0;
     background-position: center;
     width: 8ex;
     height: 7ex;
+    margin-right: 5ex;
 }
 
 #play{
@@ -106,15 +130,26 @@ nav{
     background-image: url(../img/Pause_64px.png);
 }
 
+#checks{
+    background-image: url(../img/Checked_48px.png);
+}
+
 .Timer{
-    font-size: 6ex;
+    font-size: 5ex;
+    width: 8ex;
+}
+
+.checkicon{
+    background-image: url(../img/Checked_48px);
+    width: 8ex;
+    height: 7ex;
     display: flex;
     justify-content: right;
 }
 
 .box{
     display: flex;
-    padding-bottom: 15px;
+    padding-top: 20px;
     width: 100%;
     justify-content: center;
     align-items: flex-end;
@@ -174,7 +209,7 @@ input:disabled{
 }
 
 .TakNum > button:hover{
-    border: rgb(0, 128, 128) 3px solid;
+    border: #c82f63 3px solid;
 }
 
 #Check{
@@ -183,32 +218,30 @@ input:disabled{
     background-color: whitesmoke;
 }
 
-#NT_Bk{
-    width: 50%;
-    height: 10ex;
-    display: flex;
-    justify-content: center;
-    justify-content: space-evenly;
+.FinshButt{
+    left: 60ex;
 }
 
-#Next{
-    font-size: 40px;
-    text-align: center; 
-    color: black;
-    text-decoration: none;
+#finsh{
+    border-radius: 7px;
+    font-size: 23px;
+    border: slategray solid 1px;
+    margin: 0 15px;
 }
 
-#Back{
-    font-size: 40px;
-    text-align: center;   
-    color: black;
-    text-decoration: none;
+#finsh:hover{
+background-color:#c82f63;
+    color: whitesmoke;
+    border: none;
+    border-radius: 7px;
+    font-size: 23px;
 }
 
 .select:hover{
-    background-color:gold;
+    background-color:#ec7ead;
     text-decoration: none;
 }
 .call_val{
-    background-color: lightsalmon;
+    background-color: #7a1b38;
+    color: white;
 }

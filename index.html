@@ -25,22 +25,26 @@
             <button id ="Go" class="Start_On"><h2>Let's Start</h2></button>
         <!-- Game Information Button -->
             <button id="About_Game" class="Start_On"><h2>Instructions</h2></button>
-            <p id="instruc_game">Sudoku is a numbers puzzle, and it's a game for one person.
-                How to play: The player must fill the empty boxes with the correct numbers but be aware of the frequency or similarity of the numbers</p>
+            <span id="instruc_game"><p> Is a numbers puzzle, and it's a game for one person.
+                How to play: The player must fill the empty boxes with the correct numbers but be aware of the frequency or similarity of the numbers
+            </p>
+        </span>
             </div>
         
 
     <!-- Second Pag it for game -->
     <div class="game_Pag">
-        <nav>
+        <header>
+        <nav id="continer">
             <!-- <div id="difficulty_text" class="diffic">Difficulty: Esay</div> -->
-            <div class = "continer">
             <button id="pause"></button>
             <button id="play"></button>
-            <span class="Timer">00:00:00</span>
-        </div>
-        </nav>
-    
+            <span class="Timer">0:0:0</span>
+            <button id = "checks"></button>
+                <a id="Back" href="index.html">Back</a>
+                <a id="Next" href="Next_Level.html">Next Level</a>
+            </nav>
+        </header>
         
     <div class= "box">
         <table>
@@ -111,10 +115,9 @@
         </div>
     </div>
     <br>
-    <div id="NT_Bk">
-        <a id="Back" href="index.html">Back</a>
-        <a id="Next" href="Next_Level.html">Next Level</a>
-    </div>
+    <span class="FinshButt">
+        <button id="finsh">End game</button>
+    </span>
 </div>
     <script src="./JS/jQuery.js"></script>
     <script src="./JS/main.js"></script>
