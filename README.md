@@ -17,7 +17,7 @@ Sudoku is a game based on numbers where the player must put the correct number i
 ![Game Pag](https://media.git.generalassemb.ly/user/26796/files/1aa47100-658d-11ea-8ed0-6708d4b676d9)
 
 ## Game linke
-[](https://pages.git.generalassemb.ly/OLA13/Sudoku---Ola/.)
+- [](https://pages.git.generalassemb.ly/OLA13/Sudoku---Ola/.)
 
 ## Difficult part and Favourate part
 ## 1- Difficult part
