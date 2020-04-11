@@ -11,9 +11,9 @@ Sudoku is a game based on numbers where the player must put the correct number i
     - jQuery
 
 ## wireframe
-###Home page
+### Home page
 ![Front Pag](https://media.git.generalassemb.ly/user/26796/files/d5803f00-658c-11ea-928f-8181955755ca)
-###Game page
+### Game page
 ![Game Pag](https://media.git.generalassemb.ly/user/26796/files/1aa47100-658d-11ea-8ed0-6708d4b676d9)
 
 ## Game linke
