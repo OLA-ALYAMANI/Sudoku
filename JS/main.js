@@ -98,12 +98,16 @@ var numbutton = $(".TakNum").children()
 
 
 // select the one of empty squares
+
 row.click(function (e) {
       if ($(this).text() == "") {
+            // select the one of empty box
             $(this).addClass("select")
             Boxs = $(this)
       }
 })
+
+
 
 
 // set the number to empty squares
@@ -149,6 +153,23 @@ $("#checks").click(function () {
                   console.log("stop")
                   // alert("no")
                   // break
+            }
+      }
+})
+
+$("#checks").click(function () {
+      for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                  var check = numbutton[i]
+                  if (check[i] !== row[i] && check[i] !== clou[j]) {
+                        $(this).addClass(".call_val")
+                        alert("complet")
+                        break
+                  }
+                  else {
+                        alert("no")
+                        break
+                  }
             }
       }
 })
