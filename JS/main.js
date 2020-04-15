@@ -1,19 +1,15 @@
-<<<<<<< HEAD
+
 var clock = $(".Timer")
-$("#Go").click(function(){
-      if(clock === "0:0:0"){
-=======
-$("#Go").click(function(){
-      if($(".Time").html() == 00){
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
+$("#Go").click(function () {
+      if (clock === "0:0:0") {
             start_time()
       }
 })
 // Track our timer
 var active = false
 // the main function
-function start_time(){
-      if(active){
+function start_time() {
+      if (active) {
             var timer = document.getElementsByClassName(".Timer").innerHTML
             // split the time use (:) in the array
             var arr = timer.split(":")
@@ -24,67 +20,62 @@ function start_time(){
             //  get seconds
             var sec = arr[2]
 
-            if(min == 59){
-                  if(sec == 59){
+            if (min == 59) {
+                  if (sec == 59) {
                         hour++
                         min = 0
                         // for the number of hour less then 10
-                        if(hour < 10)
+                        if (hour < 10)
                               hour = "0" + hour
-                        }
-                        else{
-                              min++
-                        }
-                        // for the number of minutes less then 10
-                        if(min < 10)
-                              min = "0" + min
-                              sec = 0
-                        }
-                        else{
-                              sec++
-                        if(sec < 10)
-                              sec = "0" + sec
                   }
+                  else {
+                        min++
+                  }
+                  // for the number of minutes less then 10
+                  if (min < 10)
+                        min = "0" + min
+                  sec = 0
+            }
+            else {
+                  sec++
+                  if (sec < 10)
+                        sec = "0" + sec
+            }
             // update html
             document.getElementsByClassName(".Timer").innerHTML = hour + ":" + min + ":" + sec
             setTimeout(start_time(), 1000)
       }
 }
 // fuction for change states - if click play or pause
-      function changeState(){
-            if(active == false){
-<<<<<<< HEAD
-                  document.getElementsByID("#pause").innerHTML
-=======
-                  document.getElementsByID("#pause")
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
-            }
-            else{
-                  active = true
-                        start_time()
-<<<<<<< HEAD
-                  document.getElementsByID("#play").innerHTML
-=======
-                  document.getElementsByID("#play")
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
-            }
+function changeState() {
+      if (active == false) {
+            document.getElementsByID("#pause").innerHTML
       }
+      else {
+            active = true
+            start_time()
+            document.getElementsByID("#play").innerHTML
+      }
+}
 
 // show and hide Pags
+// show home page
 $(".game_Pag").hide();
-$("a").on("click", function(){
+$("a").on("click", function () {
       $(".game_Pag").hide();
       $(".Front_Pag").show();
 });
 
-$("#Go").on("click", function(){
+// show game page
+$("#Go").on("click", function () {
       start_time()
       $(".game_Pag").show();
       $(".Front_Pag").hide();
 });
 
+// Show information game
 $("#instruc_game").hide();
-$("#About_Game").on("click", function(){
+$("#About_Game").on("click", function () {
       $("#instruc_game").show();
 });
 
@@ -93,85 +84,80 @@ $("#About_Game").on("click", function(){
 
 // var Sudoku_solve=[[1,2,3,4],[3,4,2,1],[2,1,4,3],[4,3,1,2]]
 
-<<<<<<< HEAD
+
 
 // Play the game
 
-      var Boxs
-      var row = $(".Val_Num")
-      var clou = $(".colm")
-      var numbutton = $(".TakNum").children()
-
-=======
-var Boxs
+var Boxs = []
+//row squares
 var row = $(".Val_Num")
+//colum squares
 var clou = $(".colm")
+// The number
 var numbutton = $(".TakNum").children()
 
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
-// select the one of empty box
-row.click(function(e){
-      if($(this).text()==""){
+
+// select the one of empty squares
+row.click(function (e) {
+      if ($(this).text() == "") {
             $(this).addClass("select")
-            Boxs = $(this) 
+            Boxs = $(this)
       }
 })
-<<<<<<< HEAD
 
-// set the number to empty box
-numbutton.click(function(){
-      if(Boxs){
+
+// set the number to empty squares
+numbutton.click(function () {
+      if (Boxs) {
+            // the number will save insde Boxs
+            Boxs.push($(this).text())
             Boxs.val($(this).text())
       }
-      // for (var i=1; i<=4; i++){
-      //       for(var j=0; j<=4; j++){
-      //             // var check = Boxs[0]
-      //                   if($(this) == row[i] && $(this) == clou[j]){
-      //                         alert("noo")
-      //                   }
-      //             }
-      //       }
 })
 
-$("#checks").click(function(){
-      for (var i=0; i<4; i++){
-            for(var j=0; j<4; j++){
-                  var check = numbutton[i]
-                  if(check[i] !== row[i] && check[i] !== clou[j]){
-                        $(this).addClass(".call_val")
-                        alert("complet")
-                        break
-                        }
-                        else{
-                              alert("no")
-                              break
-                        }
+
+function randomNumberinBox() {
+      for (var i = 1; i <= 2; i++) {
+            var row = Math.floor(Math.random() * 2);
+            var col = Math.floor(Math.random() * 2);
+            var accept = true;
+            for (var j = 0; j < rand.length; j++) {
+                  // if number exist or there is a number already located in then ignore and try again
+                  if (rand[j][0] == i | (rand[j][1] == row & rand[j][1] == col)) {
+                        accept = false;
+                        // try to get a new position for this number
+                        i--;
+                        break;
                   }
             }
+            if (accept) {
+                  rand.push([i, row, col]);
+            }
+      }
+}
+
+$("#checks").click(function () {
+      for (var i = 1; i <= 2; i++) {
+            var check = Boxs[i]
+            if (check[i] !== row[i] || check[i] !== clou[i]) {
+                  $(this).addClass(".call_val")
+                  console.log("complet")
+                  // alert("complet")
+                  // break
+            }
+            else {
+                  console.log("stop")
+                  // alert("no")
+                  // break
+            }
+      }
 })
 
-$("#finsh").click(function(){
-      if(row[i] != " " && clou[j] != " "){
+$("#finsh").click(function () {
+      if (row[i] != " " && clou[j] != " ") {
             alert("You complet the game")
       }
-      else{
+      else {
             alert("There empty box")
-=======
-
-// set the number to empty box
-numbutton.click(function(){
-      if(Boxs){
-            Boxs.val($(this).text())
-      }
-      for (var i = 1; i <= 4; i++)
-      var check = Boxs[0]
-      if(check == row[i] && check == clou[i]){
-            return false
-      }
-      else{
-            return true
->>>>>>> 8ae4b4ddbb4189bf97f90af311e59392a3a2faff
       }
 })
-// Boxs.attr('id').match(/\d+$/)
-// console.log($(this).attr("id"))
