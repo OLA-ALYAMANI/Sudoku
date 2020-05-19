@@ -30,6 +30,7 @@ var active = false
 function start_time() {
       if (active) {
             var timer = document.getElementById("Timer").innerHTML;
+            console.log(timer)
             // split the time use (:) in the array
             var arr = timer.split(":");
             // get hour
