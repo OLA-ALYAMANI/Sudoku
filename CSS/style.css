@@ -129,19 +129,15 @@ nav{
     background-repeat: no-repeat;
 }
 
-.Timer{
-    font-size: 5ex;
-    width: 8ex;
-}
-
 /* .checkicon{
     background-image: url(../img/Checked_48px);
     width: 8ex;
     height: 7ex;
 } */
 
-.Timer{
+#Timer{
     font-size: 6ex;
+    width: 8ex;
     display: flex;
     justify-content: right;
 }

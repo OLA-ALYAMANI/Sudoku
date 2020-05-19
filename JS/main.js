@@ -1,62 +1,10 @@
 
-var clock = $(".Timer")
-$("#Go").click(function () {
-      if (clock === "0:0:0") {
-            start_time()
-      }
-})
-// Track our timer
-var active = false
-// the main function
-function start_time() {
-      if (active) {
-            var timer = document.getElementsByClassName(".Timer").innerHTML
-            // split the time use (:) in the array
-            var arr = timer.split(":")
-            // get hour
-            var hour = arr[0]
-            // get minutes
-            var min = arr[1]
-            //  get seconds
-            var sec = arr[2]
-
-            if (min == 59) {
-                  if (sec == 59) {
-                        hour++
-                        min = 0
-                        // for the number of hour less then 10
-                        if (hour < 10)
-                              hour = "0" + hour
-                  }
-                  else {
-                        min++
-                  }
-                  // for the number of minutes less then 10
-                  if (min < 10)
-                        min = "0" + min
-                  sec = 0
-            }
-            else {
-                  sec++
-                  if (sec < 10)
-                        sec = "0" + sec
-            }
-            // update html
-            document.getElementsByClassName(".Timer").innerHTML = hour + ":" + min + ":" + sec
-            setTimeout(start_time(), 1000)
-      }
-}
-// fuction for change states - if click play or pause
-function changeState() {
-      if (active == false) {
-            document.getElementsByID("#pause").innerHTML
-      }
-      else {
-            active = true
-            start_time()
-            document.getElementsByID("#play").innerHTML
-      }
-}
+// $("#Go").click(function () {
+//       if (active == false) {
+//             active = true;
+//             start_time();
+//       }
+// })
 
 // show and hide Pags
 // show home page
@@ -68,10 +16,66 @@ $("a").on("click", function () {
 
 // show game page
 $("#Go").on("click", function () {
-      start_time()
       $(".game_Pag").show();
       $(".Front_Pag").hide();
+      if (active == false) {
+            active = true;
+            start_time();
+      }
 });
+
+// Track our timer
+var active = false
+// the main function
+function start_time() {
+      if (active) {
+            var timer = document.getElementById("Timer").innerHTML;
+            // split the time use (:) in the array
+            var arr = timer.split(":");
+            // get hour
+            var hour = arr[0]
+            // get minutes
+            var min = arr[1]
+            //  get seconds
+            var sec = arr[2]
+
+            if (sec == 59) {
+                  if (min == 59) {
+                        hour++;
+                        min = 0;
+                        // for the number of hour less then 10
+                        if (hour < 10) hour = "0" + hour;
+                  }
+                  else { min++; }
+                  // for the number of minutes less then 10
+                  if (min < 10) min = "0" + min;
+                  sec = 0;
+            }
+            else {
+                  sec++;
+                  if (sec < 10) sec = "0" + sec;
+            }
+            // update html
+            document.getElementById("Timer").innerHTML = hour + ":" + min + ":" + sec
+            setTimeout(start_time(), 1000)
+      }
+}
+// fuction for change states - if click play or pause
+// function changeState() {
+//       if (active == false) {
+//             active = true;
+//             start_time();
+//             console.log("Time has been starting");
+//             document.getElementsByID("#Go").innerHTML = "Play"
+//       }
+//       else {
+//             active = false
+//             console.log("The time id pause")
+//             document.getElementsByID("#pause").innerHTML = "Pause"
+//       }
+// }
+
+
 
 // Show information game
 $("#instruc_game").hide();
@@ -92,7 +96,7 @@ var Boxs = []
 //row squares
 var row = $(".Val_Num")
 //colum squares
-var clou = $(".colm")
+var col = $(".colm")
 // The number
 var numbutton = $(".TakNum").children()
 
@@ -108,8 +112,6 @@ row.click(function (e) {
 })
 
 
-
-
 // set the number to empty squares
 numbutton.click(function () {
       if (Boxs) {
@@ -120,10 +122,11 @@ numbutton.click(function () {
 })
 
 
-function randomNumberinBox() {
-      for (var i = 1; i <= 2; i++) {
-            var row = Math.floor(Math.random() * 2);
-            var col = Math.floor(Math.random() * 2);
+function randNumberinBox() {
+      var rand = []
+      for (var i = 1; i <= 4; i++) {
+            var row = Math.floor(Math.random() * 4);
+            var col = Math.floor(Math.random() * 4);
             var accept = true;
             for (var j = 0; j < rand.length; j++) {
                   // if number exist or there is a number already located in then ignore and try again
@@ -141,9 +144,9 @@ function randomNumberinBox() {
 }
 
 $("#checks").click(function () {
-      for (var i = 1; i <= 2; i++) {
+      for (var i = 1; i <= 4; i++) {
             var check = Boxs[i]
-            if (check[i] !== row[i] || check[i] !== clou[i]) {
+            if (check[i] !== row[i] || check[i] !== col[i]) {
                   $(this).addClass(".call_val")
                   console.log("complet")
                   // alert("complet")
@@ -157,25 +160,9 @@ $("#checks").click(function () {
       }
 })
 
-$("#checks").click(function () {
-      for (var i = 0; i < 4; i++) {
-            for (var j = 0; j < 4; j++) {
-                  var check = numbutton[i]
-                  if (check[i] !== row[i] && check[i] !== clou[j]) {
-                        $(this).addClass(".call_val")
-                        alert("complet")
-                        break
-                  }
-                  else {
-                        alert("no")
-                        break
-                  }
-            }
-      }
-})
 
 $("#finsh").click(function () {
-      if (row[i] != " " && clou[j] != " ") {
+      if (row[i] != " " && col[j] != " ") {
             alert("You complet the game")
       }
       else {
