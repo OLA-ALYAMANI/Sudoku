@@ -14,6 +14,11 @@ $("#Go").on("click", function () {
       start_time()
 });
 
+// Show information game
+$("#instruc_game").hide();
+$("#About_Game").on("click", function () {
+      $("#instruc_game").show();
+});
 
 var timerVar = setInterval(start_time, 1000);
 var totalSeconds = 0
@@ -88,16 +93,6 @@ document.getElementById("play").addEventListener("click", function () {
 //             document.getElementsByID("#pause").innerHTML = "Pause"
 //       }
 // }
-
-
-
-
-
-// Show information game
-$("#instruc_game").hide();
-$("#About_Game").on("click", function () {
-      $("#instruc_game").show();
-});
 
 
 // var Sudoku=[[1,2,3,0],[4,0,2,0],[0,1,4,0],[0,0,0,2]]
