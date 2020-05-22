@@ -1,11 +1,4 @@
 
-// $("#Go").click(function () {
-//       if (active == false) {
-//             active = true;
-//             start_time();
-//       }
-// })
-
 // show and hide Pags
 // show home page
 $(".game_Pag").hide();
@@ -16,51 +9,71 @@ $("a").on("click", function () {
 
 // show game page
 $("#Go").on("click", function () {
-      $(".game_Pag").show();
       $(".Front_Pag").hide();
-      if (active == false) {
-            active = true;
-            start_time();
-      }
+      $(".game_Pag").show();
+      start_time()
 });
 
-// Track our timer
-var active = false
+
+var timerVar = setInterval(start_time, 1000);
+var totalSeconds = 0
 // the main function
 function start_time() {
-      if (active) {
-            var timer = document.getElementById("Timer").innerHTML;
-            console.log(timer)
-            // split the time use (:) in the array
-            var arr = timer.split(":");
-            // get hour
-            var hour = arr[0]
-            // get minutes
-            var min = arr[1]
-            //  get seconds
-            var sec = arr[2]
-
-            if (sec == 59) {
-                  if (min == 59) {
-                        hour++;
-                        min = 0;
-                        // for the number of hour less then 10
-                        if (hour < 10) hour = "0" + hour;
-                  }
-                  else { min++; }
-                  // for the number of minutes less then 10
-                  if (min < 10) min = "0" + min;
-                  sec = 0;
-            }
-            else {
-                  sec++;
-                  if (sec < 10) sec = "0" + sec;
-            }
-            // update html
-            document.getElementById("Timer").innerHTML = hour + ":" + min + ":" + sec
-            setTimeout(start_time(), 1000)
-      }
+      ++totalSeconds;
+      var hour = Math.floor(totalSeconds / 3600);
+      var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+      var seconds = totalSeconds - (hour * 3600 + minute * 60);
+      if (hour < 10)
+            hour = "0" + hour;
+      if (minute < 10)
+            minute = "0" + minute;
+      if (seconds < 10)
+            seconds = "0" + seconds;
+      document.getElementById("Timer").innerHTML = hour + ":" + minute + ":" + seconds;
 }
+
+document.getElementById("pause").addEventListener("click", function () {
+      clearInterval(timerVar);
+      delete timerVar;
+})
+
+document.getElementById("play").addEventListener("click", function () {
+      timerVar = setInterval(start_time, 1000);
+})
+// Track our timer
+// var active = false
+// if (active) {
+//       var timer = document.getElementById("Timer").innerHTML;
+//       console.log(timer)
+//       // split the time use (:) in the array
+//       var arr = timer.split(":");
+//       // get hour
+//       var hour = arr[0]
+//       // get minutes
+//       var min = arr[1]
+//       //  get seconds
+//       var sec = arr[2]
+
+//       if (sec == 59) {
+//             if (min == 59) {
+//                   hour++;
+//                   min = 0;
+//                   // for the number of hour less then 10
+//                   if (hour < 10) hour = "0" + hour;
+//             }
+//             else { min++; }
+//             // for the number of minutes less then 10
+//             if (min < 10) min = "0" + min;
+//             sec = 0;
+//       }
+//       else {
+//             sec++;
+//             if (sec < 10) sec = "0" + sec;
+//       }
+//       // update html
+//       document.getElementById("Timer").innerHTML = hour + ":" + min + ":" + sec
+//       // setTimeout(start_time(), 4000)
+// }
 // fuction for change states - if click play or pause
 // function changeState() {
 //       if (active == false) {
@@ -75,6 +88,8 @@ function start_time() {
 //             document.getElementsByID("#pause").innerHTML = "Pause"
 //       }
 // }
+
+
 
 
 
