@@ -11,7 +11,8 @@ $("a").on("click", function () {
 $("#Go").on("click", function () {
       $(".Front_Pag").hide();
       $(".game_Pag").show();
-      start_time()
+      start_time();
+      randNumberinBox();
 });
 
 // Show information game
@@ -104,22 +105,26 @@ document.getElementById("play").addEventListener("click", function () {
 // Play the game
 
 var Boxs = []
-//row squares
-var row = $(".Val_Num")
 //colum squares
-var col = $(".colm")
+var col = $(".call_num")
+//row squares
+var row = $(".row")
 // The number
 var numbutton = $(".TakNum").children()
 
 
 // select the one of empty squares
 
-row.click(function (e) {
+col.mouseenter(function () {
       if ($(this).text() == "") {
             // select the one of empty box
-            $(this).addClass("select")
+            // $(this).addClass("select")
             Boxs = $(this)
+            console.log(Boxs)
       }
+      $(this).css("background", "green")
+}).mouseleave(function(){
+      $(this).css("background", "")
 })
 
 
@@ -129,19 +134,22 @@ numbutton.click(function () {
             // the number will save insde Boxs
             Boxs.push($(this).text())
             Boxs.val($(this).text())
+            console.log(Boxs)
       }
 })
 
 
-function randNumberinBox() {
+randNumberinBox = () => {
       var rand = []
       for (var i = 1; i <= 4; i++) {
+            // new row
             var row = Math.floor(Math.random() * 4);
+            //new col
             var col = Math.floor(Math.random() * 4);
             var accept = true;
             for (var j = 0; j < rand.length; j++) {
                   // if number exist or there is a number already located in then ignore and try again
-                  if (rand[j][0] == i | (rand[j][1] == row & rand[j][1] == col)) {
+                  if (rand[j][0] == i | (rand[j][i] == row & rand[j][i] == col)) {
                         accept = false;
                         // try to get a new position for this number
                         i--;
@@ -150,6 +158,7 @@ function randNumberinBox() {
             }
             if (accept) {
                   rand.push([i, row, col]);
+                  console.log(rand);
             }
       }
 }
