@@ -114,13 +114,12 @@ var numbutton = $(".TakNum").children()
 
 
 // select the one of empty squares
-
 col.mouseenter(function () {
       if ($(this).text() == "") {
             // select the one of empty box
             // $(this).addClass("select")
             Boxs = $(this)
-            console.log(Boxs)
+            // console.log(Boxs)
       }
       $(this).css("background", "green")
 }).mouseleave(function(){
@@ -141,23 +140,23 @@ numbutton.click(function () {
 
 randNumberinBox = () => {
       var rand = []
-      for (var i = 1; i <= 4; i++) {
+      for (var x = 1; x <= 4; x++) {
             // new row
             var row = Math.floor(Math.random() * 4);
             //new col
             var col = Math.floor(Math.random() * 4);
             var accept = true;
-            for (var j = 0; j < rand.length; j++) {
-                  // if number exist or there is a number already located in then ignore and try again
-                  if (rand[j][0] == i | (rand[j][i] == row & rand[j][i] == col)) {
-                        accept = false;
-                        // try to get a new position for this number
-                        i--;
-                        break;
-                  }
-            }
+            // for (var y = 0; y <= rand.length; y++) {
+            //       // if number exist or there is a number already located in then ignore and try again
+            //       if (rand[y][0] == x | (rand[y][x] == row & rand[y][x] == col)) {
+            //             accept = false;
+            //             // try to get a new position for this number
+            //             x--;
+            //             break;
+            //       }
+            // }
             if (accept) {
-                  rand.push([i, row, col]);
+                  rand.push([x, row, col]);
                   console.log(rand);
             }
       }
